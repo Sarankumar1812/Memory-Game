@@ -1,7 +1,7 @@
 const gameBoard = document.getElementById('gameBoard');
 const restartButton = document.getElementById('restart');
 const moveCountElement = document.getElementById('moveCount');
-const completionMessage = document.getElementById('completionMessage'); // Reference to the completion message element
+const completionMessage = document.getElementById('completionMessage'); 
 
 let cards = [];
 let flippedCards = [];
@@ -89,7 +89,7 @@ function checkForMatch() {
         matchedPairs++;
         flippedCards = [];
         if (matchedPairs === cards.length / 2) {
-            completionMessage.style.display = 'block'; // Show completion message
+            completionMessage.style.display = 'block'; 
         }
     } else {
         setTimeout(() => {
@@ -106,7 +106,7 @@ function initGame() {
     matchedPairs = 0;
     moveCount = 0;
     moveCountElement.textContent = `Moves: ${moveCount}`;
-    completionMessage.style.display = 'none'; // Hide the completion message initially
+    completionMessage.style.display = 'none'; 
     createCards();
     shuffleCards();
     cards.forEach(card => gameBoard.appendChild(card));
